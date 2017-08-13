@@ -23,7 +23,7 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activit_profile);
-       // NavigationBarSettup();
+       NavigationBarSettup();
         Log.d(TAG, "onCreate: Started");
         setupTopToolbar();
     }

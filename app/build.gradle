@@ -26,7 +26,10 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.0'
     //compile 'com.android.support:design:23.2.1'
     compile 'com.android.support:design:25.0.0'
-    compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.1'
+   compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.1'
+   //compile 'com.android.support.constraint:constraint-layout:1.0.0'
+
+
 
 
 
