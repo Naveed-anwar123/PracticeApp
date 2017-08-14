@@ -1,16 +1,22 @@
 package com.example.naveed.practiceapp.Profile;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.naveed.practiceapp.R;
 import com.example.naveed.practiceapp.utils.BottomNavigationBarHelper;
+import com.example.naveed.practiceapp.utils.SectionPagerAdapterForFragment;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 /**
@@ -19,14 +25,20 @@ import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 public class ProfileActivity extends AppCompatActivity {
 
     private static final String TAG = "Profile";
+
+    private ProgressBar progressBar;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activit_profile);
-       NavigationBarSettup();
+        progressBar = (ProgressBar) findViewById(R.id.progressbar);
+
+        progressBar.setVisibility(View.GONE);
+      // NavigationBarSettup();
         Log.d(TAG, "onCreate: Started");
-        setupTopToolbar();
+  setupTopToolbar();
     }
+
 
 
     public void setupTopToolbar(){
@@ -39,6 +51,8 @@ public class ProfileActivity extends AppCompatActivity {
                 {
                     case R.id.profileMenu:
                         Toast.makeText(getBaseContext() , "clicked",Toast.LENGTH_LONG).show();
+                        Intent i = new Intent(ProfileActivity.this , AccountSettingActivity.class);
+                        startActivity(i);
                 }
                 return false;
             }
@@ -62,4 +76,6 @@ public class ProfileActivity extends AppCompatActivity {
         return true;
 
     }
+
+
 }

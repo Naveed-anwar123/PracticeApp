@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PracticeApp</string>
+    <string name="edit_name">Edit Profile</string>
+    <string name="sign_out">Sign out</string>
 </resources>
