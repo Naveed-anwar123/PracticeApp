@@ -1,0 +1,112 @@
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:id="@+id/relative1"
+        >
+        <include layout="@layout/layout_top"></include>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative1"
+        android:background="@drawable/blackborder"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:id="@+id/linear"
+            >
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="25"
+                >
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/profile_image"
+                    android:layout_centerVertical="true"
+
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="75"
+                android:layout_height="match_parent">
+
+        <include layout="@layout/snippet_top_profile"></include>
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/linear"
+            android:id="@+id/linear1"
+            android:padding="20dp"
+            android:background="@drawable/bottomborders"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Naveed"
+                android:textSize="28sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I Live in Lahore"
+                android:textSize="22sp"
+                android:layout_marginBottom="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Summer.co"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/blue"
+                />
+        </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear1"
+                android:layout_marginBottom="50dp"
+                >
+                <GridView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="3"
+                    android:verticalSpacing="1dp"
+                    android:horizontalSpacing="1dp"
+                    android:id="@+id/grid"
+                    >
+
+
+                </GridView>
+            </RelativeLayout>
+
+    </RelativeLayout>
+
+</merge>
